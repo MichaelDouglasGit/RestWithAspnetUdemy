@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RestWithAspnetUdemy.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PersonController : ControllerBase
     {
@@ -59,7 +59,7 @@ namespace RestWithAspnetUdemy.Controllers
             return Ok(_personService.Update(person));
         }
 
-        [HttpGet("{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
             _personService.Delete(id);
