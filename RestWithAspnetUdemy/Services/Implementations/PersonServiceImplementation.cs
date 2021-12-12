@@ -1,4 +1,5 @@
 ﻿using RestWithAspnetUdemy.Model;
+using RestWithAspnetUdemy.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,12 @@ namespace RestWithAspnetUdemy.Services.Implementations
 {
     public class PersonServiceImplementation : IPersonService
     {
-        private volatile int count;
+        private DataContext _context;
+
+        public PersonServiceImplementation(DataContext context)
+        {
+            _context = context;
+        }
 
         public Person Create(Person person)
         {
@@ -23,26 +29,12 @@ namespace RestWithAspnetUdemy.Services.Implementations
 
         public List<Person> FindAll()
         {
-            List<Person> persons = new List<Person>();
-            for (int i = 0; i < 8; i++) 
-            {
-                Person person = MockPerson(i);
-                persons.Add(person);
-            }
-            
-            return persons;
+            return _context.Persons.ToList();
         }
 
         public Person FindByID(long id)
         {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FistName = "Michael",
-                LastName = "Douglas",
-                Address = "São Paulo - SP - Brasil",
-                Gender = "Male"
-            };
+            return null;
         }
 
         public Person Update(Person person)
@@ -50,21 +42,5 @@ namespace RestWithAspnetUdemy.Services.Implementations
             return person;
         }
 
-        private Person MockPerson(int i)
-        {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FistName = "Person Name" + i,
-                LastName = "Person LastName" + i,
-                Address = "Some Address" + i,
-                Gender = "Male"
-            };
-        }
-
-        private long IncrementAndGet()
-        {
-            return Interlocked.Increment(ref count);
-        }
     }
 }
