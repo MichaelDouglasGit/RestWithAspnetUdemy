@@ -11,9 +11,9 @@ namespace RestWithAspnetUdemy.Model
     {
         [Column("ID")]
         public long Id { get; set; }
-        [Column("FISTNAME")]
+        [Column("FIRST_NAME")]
         public string FistName { get; set; }
-        [Column("LASTNAME")]
+        [Column("LAST_NAME")]
         public string LastName { get; set; }
         [Column("ADDRESS")]
         public string Address { get; set; }

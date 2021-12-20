@@ -19,6 +19,16 @@ namespace RestWithAspnetUdemy.Services.Implementations
 
         public Person Create(Person person)
         {
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             return person;
         }
 
@@ -34,13 +44,31 @@ namespace RestWithAspnetUdemy.Services.Implementations
 
         public Person FindByID(long id)
         {
-            return null;
+            return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
         public Person Update(Person person)
         {
+            if (!Exists(person.Id)) return new Person();
+            
+            var result = _context.Persons.Any(p => p.Id.Equals(person.Id));
+
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             return person;
         }
 
+        private bool Exists(long id)
+        {
+            return _context.Persons.Any(p => p.Id.Equals(id));
+        }
     }
 }

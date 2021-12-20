@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RestWithAspnetUdemy.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class PersonController : ControllerBase
     {
