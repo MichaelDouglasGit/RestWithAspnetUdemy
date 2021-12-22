@@ -29,7 +29,10 @@ namespace RestWithAspnetUdemy
 
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connection));
 
-            //Injeção de dependencia
+            //Versioning API
+            services.AddApiVersioning();
+
+            //Dependency Injection
             services.AddScoped<IPersonService, PersonServiceImplementation>();
         }
 
