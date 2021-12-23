@@ -6,13 +6,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RestWithAspnetUdemy.Services.Implementations
+namespace RestWithAspnetUdemy.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private DataContext _context;
 
-        public PersonServiceImplementation(DataContext context)
+        public PersonRepositoryImplementation(DataContext context)
         {
             _context = context;
         }
@@ -77,7 +77,7 @@ namespace RestWithAspnetUdemy.Services.Implementations
                 }
             }
         }
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return _context.Persons.Any(p => p.Id.Equals(id));
         }

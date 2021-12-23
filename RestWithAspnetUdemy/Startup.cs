@@ -5,8 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RestWithAspnetUdemy.Model.Context;
-using RestWithAspnetUdemy.Services;
-using RestWithAspnetUdemy.Services.Implementations;
+using RestWithAspnetUdemy.Business;
+using RestWithAspnetUdemy.Business.Implementations;
+using RestWithAspnetUdemy.Repository;
+using RestWithAspnetUdemy.Repository.Implementations;
 
 namespace RestWithAspnetUdemy
 {
@@ -33,7 +35,8 @@ namespace RestWithAspnetUdemy
             services.AddApiVersioning();
 
             //Dependency Injection
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
