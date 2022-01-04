@@ -43,7 +43,7 @@ namespace RestWithAspnetUdemy.Repository.Implementations
             {
                 if (!Exists(book.Id)) return null;
 
-                var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(book.Id));
+                var result = _context.Books.SingleOrDefault(p => p.Id.Equals(book.Id));
                 if (result != null)
                 {                
                     _context.Entry(result).CurrentValues.SetValues(book);
@@ -74,7 +74,7 @@ namespace RestWithAspnetUdemy.Repository.Implementations
         }
         public bool Exists(long id)
         {
-            return _context.Persons.Any(p => p.Id.Equals(id));
+            return _context.Books.Any(p => p.Id.Equals(id));
         }       
     }
 }

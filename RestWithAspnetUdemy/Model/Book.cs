@@ -10,7 +10,7 @@ namespace RestWithAspnetUdemy.Model
     public class Book
     {
         [Column("ID")]
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Column("AUTHOR")]
         public string Author { get; set; }
         [Column("LAUNCH_DATE")]
