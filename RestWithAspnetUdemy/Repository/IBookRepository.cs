@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RestWithAspnetUdemy.Repository
 {
-    public interface IPersonRepository
+    public interface IBookRepository
     {
-        Person Create(Person person);
-        Person FindByID(long id);
-        List<Person> FindAll();
-        Person Update(Person person);
+        Book Create(Book book);
+        Book FindById(long id);
+        List<Book> FindAll();
+        Book Update(Book book);
         void Delete(long id);
         bool Exists(long id);
     }

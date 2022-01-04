@@ -1,7 +1,7 @@
 ﻿CREATE TABLE BOOKS (
-  id INT identity(1,1) PRIMARY KEY,
-  author varchar(100),
-  launch_date datetime NOT NULL,
-  price decimal(30,2) NOT NULL,
-  title varchar(100)
+  ID INT IDENTITY(1,1) PRIMARY KEY,
+  AUTHOR VARCHAR(100),
+  LAUNCH_DATE DATETIME NOT NULL,
+  PRICE DECIMAL(30,2) NOT NULL,
+  TITLE VARCHAR(100)
 ) 

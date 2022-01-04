@@ -62,20 +62,20 @@ namespace RestWithAspnetUdemy.Repository.Implementations
         }
         public void Delete(long id)
         {
-            var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
-            if (result != null)
+            try
             {
-                try
+                var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+                if (result != null)
                 {
                     _context.Persons.Remove(result);
                     _context.SaveChanges();
                 }
-                catch (Exception ex)
-                {
-
-                    throw ex;
-                }
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
         public bool Exists(long id)
         {
