@@ -32,7 +32,7 @@ namespace RestWithAspnetUdemy.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            var person = _personBusiness.FindByID(id);
+            var person = _personBusiness.FindById(id);
             if(null == person)
             {
                 return NotFound();

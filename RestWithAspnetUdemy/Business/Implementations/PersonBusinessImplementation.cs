@@ -1,6 +1,7 @@
 ﻿using RestWithAspnetUdemy.Model;
 using RestWithAspnetUdemy.Model.Context;
 using RestWithAspnetUdemy.Repository;
+using RestWithAspnetUdemy.Repository.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace RestWithAspnetUdemy.Business.Implementations
 {
     public class PersonBusinessImplementation : IPersonBusiness
     {
-        private readonly IPersonRepository _repository;
+        private readonly IRepository<Person> _repository;
 
-        public PersonBusinessImplementation(IPersonRepository repository)
+        public PersonBusinessImplementation(IRepository<Person> repository)
         {
             _repository = repository;
         }
@@ -22,9 +23,9 @@ namespace RestWithAspnetUdemy.Business.Implementations
             return _repository.FindAll();
         }
 
-        public Person FindByID(long id)
+        public Person FindById(long id)
         {
-            return _repository.FindByID(id);
+            return _repository.FindById(id);
         }
         public Person Create(Person person)
         {

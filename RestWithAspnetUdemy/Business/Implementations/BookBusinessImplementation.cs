@@ -1,6 +1,7 @@
 ﻿using RestWithAspnetUdemy.Model;
 using RestWithAspnetUdemy.Model.Context;
 using RestWithAspnetUdemy.Repository;
+using RestWithAspnetUdemy.Repository.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace RestWithAspnetUdemy.Business.Implementations
 {
     public class BookBusinessImplementation : IBookBusiness
     {
-        private IBookRepository _repository;
-        public BookBusinessImplementation(IBookRepository repository)
+        private IRepository<Book> _repository;
+        public BookBusinessImplementation(IRepository<Book> repository)
         {
             _repository = repository;
         }

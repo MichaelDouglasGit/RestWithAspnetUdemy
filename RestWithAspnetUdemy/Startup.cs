@@ -7,12 +7,11 @@ using Microsoft.Extensions.Hosting;
 using RestWithAspnetUdemy.Model.Context;
 using RestWithAspnetUdemy.Business;
 using RestWithAspnetUdemy.Business.Implementations;
-using RestWithAspnetUdemy.Repository;
-using RestWithAspnetUdemy.Repository.Implementations;
 using Serilog;
 using System;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
+using RestWithAspnetUdemy.Repository.Generic;
 
 namespace RestWithAspnetUdemy
 {
@@ -49,10 +48,8 @@ namespace RestWithAspnetUdemy
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
-
-            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
-            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>();            
+            services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

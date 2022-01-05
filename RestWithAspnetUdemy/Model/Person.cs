@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestWithAspnetUdemy.Model.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,10 +8,8 @@ using System.Threading.Tasks;
 namespace RestWithAspnetUdemy.Model
 {
     [Table("person")]
-    public class Person
+    public class Person : BaseEntity
     {
-        [Column("ID")]
-        public long Id { get; set; }
         [Column("FIRST_NAME")]
         public string FistName { get; set; }
         [Column("LAST_NAME")]
