@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithAspnetUdemy.Business;
+using RestWithAspnetUdemy.Data.VO;
 using RestWithAspnetUdemy.Model;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace RestWithAspnetUdemy.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Book body)
+        public IActionResult Post([FromBody] BookVO body)
         {
             if(null == body)
             {
@@ -52,7 +53,7 @@ namespace RestWithAspnetUdemy.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] Book body)
+        public IActionResult Put([FromBody] BookVO body)
         {
             if (null == body)
             {
