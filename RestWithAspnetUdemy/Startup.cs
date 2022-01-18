@@ -12,6 +12,8 @@ using System;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using RestWithAspnetUdemy.Repository.Generic;
+using RestWithAspnetUdemy.Hypermedia.Filters;
+using RestWithAspnetUdemy.Hypermedia.Enricher;
 
 namespace RestWithAspnetUdemy
 {
@@ -43,6 +45,12 @@ namespace RestWithAspnetUdemy
                 MigrateDatabase(connection);
             }
 
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            filterOptions.ContentResponseEnricherList.Add(new BookEnricher());
+
+            services.AddSingleton(filterOptions);
+
             //Versioning API
             services.AddApiVersioning();
 
@@ -69,6 +77,7 @@ namespace RestWithAspnetUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultApi","{controller=values}/{id?}");
             });
         }
 

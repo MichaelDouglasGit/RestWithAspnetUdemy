@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RestWithAspnetUdemy.Data.VO;
+using RestWithAspnetUdemy.Hypermedia.Filters;
 
 namespace RestWithAspnetUdemy.Controllers
 {
     [ApiVersion("1")]
-    [Route("api/[controller]/v{version:apiVersion}")]
+    [Route("api/[controller]/v{version:apiVersion}/")]
     [ApiController]
     public class PersonController : ControllerBase
     {
@@ -25,12 +26,14 @@ namespace RestWithAspnetUdemy.Controllers
         }
 
         [HttpGet]  
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_personBusiness.FindAll());
         }
 
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var person = _personBusiness.FindById(id);
@@ -42,6 +45,7 @@ namespace RestWithAspnetUdemy.Controllers
         }
 
         [HttpPost]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] PersonVO person)
         {
             if (null == person)
@@ -52,6 +56,7 @@ namespace RestWithAspnetUdemy.Controllers
         }
 
         [HttpPut]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] PersonVO person)
         {
             if (null == person)
