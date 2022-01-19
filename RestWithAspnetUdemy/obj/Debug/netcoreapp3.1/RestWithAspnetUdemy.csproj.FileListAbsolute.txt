@@ -96,3 +96,8 @@ C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\b
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\obj\Debug\netcoreapp3.1\RestWithAspnetUdemy.csproj.CopyComplete
