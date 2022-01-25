@@ -100,3 +100,4 @@ C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\b
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Michael Douglas\Documents\Git\RestWithAspnetUdemy\RestWithAspnetUdemy\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

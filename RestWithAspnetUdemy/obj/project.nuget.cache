@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dBMpZ/3a4FQtthbWHgiPYT/ljU5FuqjJ94DKMm7pQJui/wGxobGzFKJn8Y2ZSeqzUzdVJNOE148fjSp/0NOYFA==",
+  "dgSpecHash": "FoELV6nDUUOKIyj0CDeMU6QEbJaQ21wgJljT4K4Qt/1j5mHNw9T1oTTD4/lug0joUzUrfIdP0mMC8Bq9aCoO3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Michael Douglas\\Documents\\Git\\RestWithAspnetUdemy\\RestWithAspnetUdemy\\RestWithAspnetUdemy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael Douglas\\.nuget\\packages\\evolve\\3.0.0\\evolve.3.0.0.nupkg.sha512",
+    "C:\\Users\\Michael Douglas\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "C:\\Users\\Michael Douglas\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Michael Douglas\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Michael Douglas\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
